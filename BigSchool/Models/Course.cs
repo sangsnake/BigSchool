@@ -19,8 +19,8 @@ namespace BigSchool.Models
         public Category Category { get; set; }
         public byte CategoryId { get; set; }
 
+        public bool IsCanceled { get; set; }
     }
-    
 
 
 }

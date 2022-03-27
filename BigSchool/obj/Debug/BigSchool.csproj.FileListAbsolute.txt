@@ -87,3 +87,4 @@ C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.M
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.csproj.GenerateResource.cache
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.CreateTableCourse.resources
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.PopulateCategoryTable.resources
+C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.AddNameColumnToApplicationUser.resources
