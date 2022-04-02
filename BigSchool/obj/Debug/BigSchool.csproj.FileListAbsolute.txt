@@ -88,3 +88,4 @@ C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.c
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.CreateTableCourse.resources
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.PopulateCategoryTable.resources
 C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.AddNameColumnToApplicationUser.resources
+C:\Users\Le Tan Sang\Desktop\BigSchool\BigSchool\BigSchool\obj\Debug\BigSchool.Migrations.AddNameColumnToApplicationUser1.resources

@@ -167,13 +167,23 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\HttpConfiguration.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Controllers\FromBodyAttribute.cs" />
+    <Compile Include="Controllers\FromboyAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IHttpActionResult.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DTOs\AttendanceDto.cs" />
+    <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +202,10 @@
     <Compile Include="Migrations\202203270630377_AddNameColumnToApplicationUser.cs" />
     <Compile Include="Migrations\202203270630377_AddNameColumnToApplicationUser.Designer.cs">
       <DependentUpon>202203270630377_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204021323554_AddNameColumnToApplicationUser1.cs" />
+    <Compile Include="Migrations\202204021323554_AddNameColumnToApplicationUser1.Designer.cs">
+      <DependentUpon>202204021323554_AddNameColumnToApplicationUser1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -300,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203270630377_AddNameColumnToApplicationUser.resx">
       <DependentUpon>202203270630377_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204021323554_AddNameColumnToApplicationUser1.resx">
+      <DependentUpon>202204021323554_AddNameColumnToApplicationUser1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

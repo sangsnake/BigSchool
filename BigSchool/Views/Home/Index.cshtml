@@ -1,40 +1,71 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="row">
     <ul>
         @foreach (var course in Model)
-            {
-                <li>
-                    @course.DataTime -@course.Lecturer.Name
-                </li>
-            }
+        {
+            <li>
+                @course.DataTime -@course.Lecturer.Name
+            </li>
+        }
     </ul>
 </div>
 <div>
     <ul class="course">
         @foreach (var course in Model)
-            {
-                <li>
-                    <div class="date">
-                        <div class="month">
-                            @course.DataTime.ToString("MM")
-                        </div>
-                        <div class="day">
-                            @course.DataTime.ToString("DD")
-                        </div>
-                        <div class="details">
-                            <span class="lecturer">
-                                @course.Lecturer.Name
-                            </span>
-                            <span class="category">
-                                @course.Category.Name
-                            </span>
-                        </div>
-
+        {
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @course.DataTime.ToString("MM")
                     </div>
-                </li>
-            }
+                    <div class="day">
+                        @course.DataTime.ToString("DD")
+                    </div>
+                    <div class="details">
+                        <span class="lecturer">
+                            @course.Lecturer.Name
+                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id ="@course.LecturerId">Follow</button>
+                        </span>
+                        <span class="category">
+                            @course.Category.Name
+                        </span>
+                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                    </div>
+
+                </div>
+            </li>
+        }
     </ul>
 </div>
+@section scripts{
+    <script>
+        $(function () {
+            $('.js-toggle-attendance').click(function (e) {
+                var button = $(e.target);
+                $.post("/api/attendances", { CourseId: button.attr("data-course-id") }).done(function () {
+                    button
+                        .removeClass("btn-default")
+                        .addClass("btn-info")
+                        .text("Going");
+                }).fail(function () {
+                    alert("Something failed");
+                });
+            });
+
+
+            $('.js-toggle-follow').click(function (e) {
+                var button = $(e.target);
+                $.post("/api/followings", { FolloweeId: button.attr("data-user-id") }).done(function () {
+                    button
+                        .text("Following");
+                }).fail(function () {
+                    alert("Something failed");
+                });
+            });
+        });
+    </script>
+}
